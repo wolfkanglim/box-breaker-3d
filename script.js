@@ -1,6 +1,6 @@
-import * as THREE from '../modules/three.module.js';
-//import { OrbitControls } from '../modules/OrbitControls.js';
-import { FlyControls } from '../modules/FlyControls.js';
+import * as THREE from '../js/three.js';
+//import { OrbitControls } from '../js/OrbitControls.js';
+import { FlyControls } from '../js/FlyControls.js';
 ///// variables
 //AMMO 
 let physicsWorld;
