@@ -22,6 +22,7 @@ let mouseCoords = new THREE.Vector2();
 //let dummyBall;
 let ballInWorld = false;
 
+
 ///// audios
 const audioListener = new THREE.AudioListener();
 
@@ -93,10 +94,10 @@ function initPhysicsWorld(){
 function initGraphicsWorld(){
      clock = new THREE.Clock();
      scene = new THREE.Scene();
-     scene.background = new THREE.Color(0x222222);
+     scene.background = new THREE.TextureLoader().load('./images/space6.png');
 
      camera = new THREE.PerspectiveCamera(65, window.innerWidth/window.innerHeight, 1, 1000);
-     camera.position.set(0, 5, 75);
+     camera.position.set(0, 5, 80);
      camera.lookAt(new THREE.Vector3(0, 0, 0));
      camera.add(audioListener);
      renderer = new THREE.WebGLRenderer({ antialias: true});
@@ -463,7 +464,7 @@ function onWindowResize(){
 
 function render(){
      let deltaTime = clock.getDelta();
-     particles.rotation.z += deltaTime * 0.0125;
+     particles.rotation.z += deltaTime * 0.025;
      flyControls.update(0.002);
      // for check collision
      if(ballInWorld){
